@@ -1,8 +1,33 @@
-namespace Blog.Models{
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection.Metadata.Ecma335;
+
+namespace Blog.Models
+{
+    [Table("Category")]
     public class Category
     {
+        public Category(string name, string slug)
+        {
+            Name = name;
+            Slug = slug;
+        }
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string Slug { get; set; } = string.Empty;
+
+        [Required]
+        [MinLength(3)]
+        [MaxLength(80)]
+        [Column("Name", TypeName = "NVARCHAR")]
+        public string Name { get; set; }
+
+        [Required]
+        [MinLength(3)]
+        [MaxLength(80)]
+        [Column("Slug", TypeName = "VARCHAR")]
+        public string Slug { get; set; }
     }
 }
