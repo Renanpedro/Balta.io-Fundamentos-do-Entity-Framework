@@ -8,6 +8,8 @@ namespace Blog
     {
         static void Main(string[] args)
         {
+            using var context = new BlogDataContext();
+
             #region "Modulo Introdução"
             //Abriu a conexão no banco de dados
             // using (var context = new BlogDataContext())
@@ -61,35 +63,61 @@ namespace Blog
             // }
             #endregion
         
-            using var context = new BlogDataContext();
+            #region "Até a aula trabalhando com subconjuntos"
+            // var user = new User
+            // {
+            //     Name = "Renan Silva2",
+            //     Slug = "RenanSilva2",
+            //     Email = "Renan@silva.com2",
+            //     Bio = "Dev2",
+            //     Image = "Https://insta.com2",
+            //     PasswordHash = "1234552"
+            // };
 
-            var user = new User
-            {
-                Name = "Renan Silva2",
-                Slug = "RenanSilva2",
-                Email = "Renan@silva.com2",
-                Bio = "Dev2",
-                Image = "Https://insta.com2",
-                PasswordHash = "1234552"
-            };
-
-            var category = new Category(name:"Backend2", slug:"backend2");
+            // var category = new Category(name:"Backend2", slug:"backend2");
             
 
-            var post = new Post
-            {
-                Author = user,
-                Category = category,
-                Body = "Hello World",
-                Slug = "Comecando-com-entyity",
-                Summary = "Neste artigo iremos aprender sobre EF",
-                Title = "Começando com EF",
-                CreateDate = DateTime.Now,
-                LastUpdateDate = DateTime.Now,
-            };
+            // var post = new Post
+            // {
+            //     Author = user,
+            //     Category = category,
+            //     Body = "Hello World",
+            //     Slug = "Comecando-com-entyity",
+            //     Summary = "Neste artigo iremos aprender sobre EF",
+            //     Title = "Começando com EF",
+            //     CreateDate = DateTime.Now,
+            //     LastUpdateDate = DateTime.Now,
+            // };
 
-            context.Posts.Add(post);    
+            // context.Posts.Add(post);    
+            // context.SaveChanges();
+
+            // var posts = context.Posts.AsNoTracking()
+            // .Include(x => x.Author) //.Include funciona como o INNER JOIN
+            // .Include(x => x.Category)
+            // .OrderByDescending(x => x.LastUpdateDate)
+            // .ToList();
+
+            // foreach (var post in posts)
+            //     System.Console.WriteLine($"{post.Title} escrito por {post.Author?.Name} em {post.Category?.Name}");
+            #endregion
+
+            #region "Finalizado o Módulo Operações Básicas"
+            // Fazendo um update no autor de um post
+            var post = context
+                .Posts
+                .Include(x => x.Author) 
+                .Include(x => x.Category)
+                .OrderByDescending(x => x.LastUpdateDate)
+                .FirstOrDefault();
+
+            post.Author.Name = "Renan Alterado";
+
+            context.Posts.Update(post);
             context.SaveChanges();
+            #endregion
+
+            
         }
     }
 }
