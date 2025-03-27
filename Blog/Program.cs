@@ -104,19 +104,20 @@ namespace Blog
 
             #region "Finalizado o Módulo Operações Básicas"
             // Fazendo um update no autor de um post
-            var post = context
-                .Posts
-                .Include(x => x.Author) 
-                .Include(x => x.Category)
-                .OrderByDescending(x => x.LastUpdateDate)
-                .FirstOrDefault();
+            // var post = context
+            //     .Posts
+            //     .Include(x => x.Author) 
+            //     .Include(x => x.Category)
+            //     .OrderByDescending(x => x.LastUpdateDate)
+            //     .FirstOrDefault();
 
-            post.Author.Name = "Renan Alterado";
+            // post.Author.Name = "Renan Alterado";
 
-            context.Posts.Update(post);
-            context.SaveChanges();
+            // context.Posts.Update(post);
+            // context.SaveChanges();
             #endregion
 
+            
             
         }
     }

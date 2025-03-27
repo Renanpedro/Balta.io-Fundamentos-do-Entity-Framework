@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/czbUQFirZ8=",
+  "dgSpecHash": "+dIntipFtko=",
   "success": true,
-  "projectFilePath": "C:\\Users\\renan\\Desktop\\ESTUDO\\Balta.io\\Fundamentos do Entity Framework\\Blog\\Blog.csproj",
+  "projectFilePath": "C:\\Users\\renan\\Desktop\\ESTUDO\\Balta.io\\Fundamentos do Entity Framework\\Fluent Blog\\Blog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\renan\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\renan\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
