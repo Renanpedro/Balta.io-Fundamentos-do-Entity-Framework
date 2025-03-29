@@ -115,9 +115,7 @@ namespace Blog
 
             // context.Posts.Update(post);
             // context.SaveChanges();
-            #endregion
-
-            
+            #endregion 
             
         }
     }

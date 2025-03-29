@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "Blog/1.0.0": {
+      "blog/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3"
         },
         "runtime": {
-          "Blog.dll": {}
+          "blog.dll": {}
         }
       },
       "Azure.Core/1.38.0": {
@@ -591,7 +591,7 @@
     }
   },
   "libraries": {
-    "Blog/1.0.0": {
+    "blog/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
