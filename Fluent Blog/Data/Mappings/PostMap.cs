@@ -21,7 +21,7 @@ namespace Blog.Data.Mappings
             builder.Property(x => x.LastUpdateDate)
                 .IsRequired()
                 .HasColumnName("LastUpdateDate")
-                .HasColumnType("SMALLLDATETIME")
+                .HasColumnType("SMALLDATETIME")
                 .HasDefaultValueSql("GETDATE()"); //Esse valor será gerado pela função do SQL Server
                 // .HasDefaultValue(DateTime.Now.ToUniversalTime()); //irá gerar as datas pelo .NET ao invés do banco
 

@@ -12,7 +12,7 @@ namespace Blog.Data{
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=localhost\\SQLEXPRESS01;Database=Blog;Trusted_Connection=True;TrustServerCertificate=True;");
+            options.UseSqlServer("Server=localhost\\SQLEXPRESS01;Database=Blog_Migrations;Trusted_Connection=True;TrustServerCertificate=True;");
             // options.LogTo(Console.WriteLine); //Mostra as querys que serão executadas
         }
 
