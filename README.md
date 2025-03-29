@@ -1,7 +1,7 @@
 # Balta.io - Fundamentos do Entity FrameWork
 Link do curso: https://balta.io/player/assistir/dbb3fad9-8c65-4509-929f-b5fbb2622e8e
 
-Neste curso foi abordado de forma simples as diferentes formas de trabalhar com o Entity Framework sendo com DataAnnotations e Fluent Map, Operações Básicas (Create, Update, Delete, Select), trabalhar com migrations e excelentes dicas de perfomance e como elas devem serem aplicadas no meu código. 
+Neste curso foi abordado de forma simples as diferentes formas de trabalhar com o Entity Framework sendo com DataAnnotations e Fluent Map, Operações Básicas (Create, Update, Delete, Select), trabalhar com migrations e excelentes dicas de perfomance e como elas devem ser aplicadas no meu código. 
 
 # Introdução
 **ORMs - Object Relation Mapping** (Mapeamento objeto relacional)
